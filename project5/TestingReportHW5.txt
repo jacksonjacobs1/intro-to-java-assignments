@@ -1,0 +1,55 @@
+Testing Report, Homework 5
+Jackson Jacobs
+
+>SlideGame class testing
+	This class runs an application to produce a GUI. Due to this, testing within
+	the IDE would have been difficult. Instead, testing was accomplished by 
+	administering the following tests:
+
+	Run the application. A window shows up with a predetermined number of buttons
+	according to dimensions specified in the program. The default is 4 x 4 buttons.
+	All buttons are initially empty at the start of the game except for one.
+	
+	Tested pressing each button around the perimeter of the grid of buttons:
+	outcome was the text of the named button moved as far to its indicated direction
+	as possible.
+
+
+>SlideGameInt class testing
+	This class handles the back-end of the Slide Game. The methods in this class
+	could be tested directly.
+1) Testing the constructor, getters and setters.
+2) Testing anotherOne()
+	>> Test case where there is empty space
+	>> Test case where the board is full
+3) Testing compareAndReplace()
+	>>adjacent coordinate is out of bounds
+	>>target int == 0
+	>>adjacent int does not equal target int
+	>>adjacent int equals target int
+
+4) Testing isGameOver()
+	>>move is possible NW || N || NE || E || SE || S || SW || W
+	>>move is not possible
+
+5) Testing [cardinal direction]Slide() methods
+	Multiple cases can be tested simply by creating a larger grid. For each of the
+	following methods, the following tests were carried out for each method:
+	// 1 must be shifted multiple spaces to an edge
+	// 1 must be shifted multiple spaces until hitting a non-equal number
+	// 1 must be shifted multiple spaces until combining with another 1
+	// 1 1 2 2 shifted left evaluates to 4 2 0 0
+	// 1 2 1 2 remains the same
+
+	>>northSlide
+	>>eastSlide
+	>>southSlide
+	>>westSlide
+	>>northEastSlide
+	>>northWestSlide
+	>>southEastSlide
+	>>southWestSlide
+
+6) Testing printBoard()
+	>>printBoard is tested in other methods to easily compare boards.
+
